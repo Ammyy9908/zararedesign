@@ -1,0 +1,105 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.hero-body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.hero-model-background {
+  flex-basis: 50%;
+  background-image: url("/public/zara_background_texture.png");
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+.hero-model-background > img {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-logo {
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%) scale(0.9);
+  display: none;
+}
+
+.product-body {
+  flex-basis: 50%;
+  height: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.product-slider {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-x: scroll;
+  align-items: center;
+  max-width: 300px;
+}
+
+.slider-control {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.slider-control > button {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 0;
+  padding: 12px;
+}
+.active-product {
+  border: 4px solid rgb(34, 34, 34) !important;
+}
+.product-thumb {
+  min-width: 300px;
+  height: 500px;
+  cursor: pointer;
+}
+.product-thumb > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 805px) {
+  .hero-body {
+    display: flex;
+  }
+  .hero-model-background {
+    display: block;
+  }
+  .hero-logo {
+    display: block;
+  }
+  .product-body {
+    background-image: none !important;
+  }
+}
